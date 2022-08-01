@@ -1,0 +1,32 @@
+.promo {
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+  align-items: center;
+  height: auto;
+  max-width: 100%;
+}
+
+.promo::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  min-height: 37px;
+  left: 0;
+  right: 0;
+  background-image: url("../img/decorate-mask.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.promo__title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.promo__subtitle {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+}

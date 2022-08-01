@@ -1,0 +1,37 @@
+.hero {
+  display: block;
+  position: relative;
+  color: #ffffff;
+  background-image: url("../img/back-mobile.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  text-align: center;
+  align-items: center;
+  height: auto;
+  max-width: 100%;
+  margin-bottom: 32px;
+  padding-top: 50px;
+  padding-bottom: 80px;
+}
+
+.hero__logo {
+  margin: 0 auto;
+  display: block;
+  position: relative;
+  height: auto;
+  max-width: 100%;
+}
+
+.hero::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  min-height: 57px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("../img/mask-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
