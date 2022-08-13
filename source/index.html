@@ -9,14 +9,17 @@
 </head>
 
 <body>
-  <header class="main-header">
+  <header class="main-header menu main-header--opened">
     <a class="main-header__logo" href="https://htmlacademy.ru/intensive/adaptive">
       <img src="img/logo.svg" width="185" height="96" alt="Логотип Седона">
     </a>
-    <nav class="main-nav">
-      <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+    <div class="main-header__menu-bar">
+      <button class="main-header__open-nav-button" type="button"><span class="visually-hidden">Открыть меню</span></button>
+    </div>
+    <nav class="main-nav main-nav__opened">
+      <button class="main-nav__toggle" type="button"><span class="visually-hidden">Закрыть меню</span></button>
       <div class="main-nav__wrapper">
-        <ul class="main-nav__list site-list">
+        <ul class="main-nav__list site-list main-nav__list--nojs">
           <li class="site-list__item site-list__item--current">
             <a class="site-list__link" href="index.html">Главная</a>
           </li>

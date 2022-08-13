@@ -1,20 +1,50 @@
 .button {
-  display: inline-block;
-  vertical-align: top;
-  font-family: "PT sans";
-  padding: 16px 49px;
+  display: block;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+  font-size: 18px;
+  line-height: 18px;
+  text-align: center;
+  color: @white;
   text-transform: uppercase;
   text-decoration: none;
-  text-align: center;
-  font-weight: 700;
-  font-size: 21px;
-  line-height: 26px;
-  color: inherit;
+
+  background-color: @light-grey-blue;
   border: 0;
-  margin: 0 auto;
-  background-color: #81b3d2;
-  color: #ffffff;
-  mix-blend-mode: normal;
+
+  &:hover,
+  &:focus {
+    background-color: @faded-blue;
+  }
+
+  &:active {
+    color: rgba(@white, 0.3);
+
+    background-color: @cool-blue;
+  }
+}
+
+/*************************************
+ * tablet styles
+ *************************************/
+@media (min-width: @tablet-width) {
+  .button {
+    &--review {
+      width: 324px;
+    }
+  }
+}
+
+/*************************************
+ * desktop styles
+ *************************************/
+@media (min-width: @desktop-width) {
+  .button {
+    &--review {
+      width: 480px;
+    }
+  }
 }
 
 .find__button {
