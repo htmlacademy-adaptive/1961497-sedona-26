@@ -1,3 +1,10 @@
+.block-photo {
+  width: @mobile-width;
+  margin: 20px auto;
+  text-transform: uppercase;
+  text-align: center;
+}
+
 .block-photo__title {
   font-family: "PT Sans", sans-serif;
   font-style: normal;
@@ -40,6 +47,29 @@
   padding: 0;
   justify-content: center;
   list-style-type: none;
+}
+
+.block-photo__wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: @tablet-width) {
+  .block-photo__wrap {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 auto;
+  }
+}
+
+.block-photo__item {
+  border-bottom: 1px solid #E5E5E5;
+  border-top: 1px solid #E5E5E5;
+  padding: 15px;
 }
 
 .photo-item__title {

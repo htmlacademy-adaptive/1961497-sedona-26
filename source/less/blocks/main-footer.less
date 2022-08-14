@@ -2,6 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  flex-direction: column;
   margin: 0;
   padding: 0;
 }
@@ -26,4 +27,35 @@
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
+}
+
+/*************************************
+ * tablet styles
+ *************************************/
+
+@media (min-width: @tablet-width) {
+  .main-footer {
+    width: @tablet-width;
+    margin: 0 auto;
+    background-color: @white;
+    padding: 40px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .main-footer__hashtag {
+    margin: 0;
+  }
+}
+
+/*************************************
+ * desktop styles
+ *************************************/
+ @media (min-width: @desktop-width) {
+  .main-footer {
+    width: @desktop-width;
+    padding-left: 120px;
+    padding-right: 120px;
+  }
 }
