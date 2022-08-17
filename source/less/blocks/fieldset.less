@@ -10,7 +10,18 @@
   font-size: 18px;
   line-height: 26px;
   color: #000000;
+
+  @media (min-width: @tablet-width) {
+    min-width: 308px;
+    padding: 0;
+    margin-left: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 45px;
+  }
 }
+
 
 .fieldset__label {
   display: flex;

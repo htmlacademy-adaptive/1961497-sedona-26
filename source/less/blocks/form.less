@@ -11,11 +11,81 @@
   flex-direction: column;
   width: 100%;
   height: auto;
+  align-items: flex-start;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 43px 48px 60px;
+    border: none;
+    align-items: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 63px 55px 120px;
+  }
+
+  &--contact-ifno {
+    padding: 0 20px 18px;
+
+    @media (min-width: @tablet-width) {
+      padding: 0 51px 48px 45px;
+    }
+
+    @media (min-width: @desktop-width) {
+      padding: 0 120px 55px 64px;
+    }
+  }
+}
+
+.form__fieldset {
+  @media (min-width: @tablet-width) {
+    position: relative;
+    padding: 0 96px 48px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 960px;
+    padding: 0 120px 73px;
+  }
 }
 
 .form__personal-data {
-  padding-left: 5%;
-  padding-right: 5%;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    position: relative;
+  }
+}
+
+.form__personal-data::after {
+  @media (min-width: @tablet-width) {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background-color: rgba(219, 219, 219, 1);
+  }
+}
+
+.form__personal-data .form__fieldset::after {
+  @media (min-width: @tablet-width) {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 1px;
+    height: 338px;
+    background-color: rgba(219, 219, 219, 1);
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 27px;
+  }
 }
 
 .form__footer {
@@ -64,4 +134,76 @@
   display: block;
   width: 100%;
   height: auto;
+  list-style-type: none;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    padding-bottom: 40px;
+  }
+}
+
+.form__title {
+  margin-bottom: 20px;
+  padding-top: 25px;
+
+  @media (min-width: @tablet-width) {
+    min-width: 402px;
+    font-size: 21px;
+    margin-bottom: 28px;
+  }
+}
+
+.form__textarea {
+  resize: none;
+  width: 247px;
+  height: 118px;
+  padding: 16px;
+  border: 0;
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  background-color: rgba(242, 242, 242, 1);
+
+  @media (min-width: @tablet-width) {
+    width: 616px;
+    height: 128px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 734px;
+  }
+}
+
+.form__footer {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    width: 648px;
+    justify-content: space-between;
+    padding: 0;
+
+    @media (min-width: @desktop-width) {
+      width: 768px;
+    }
+  }
+}
+
+.form__description {
+  margin: 0;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 21px;
+  color: rgba(51, 51, 51, 0.6);
+  align-self: flex-end;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    margin-top: 8px;
+    align-self: center;
+    font-size: 14px;
+  }
 }
