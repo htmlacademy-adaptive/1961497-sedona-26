@@ -35,22 +35,32 @@
   }
 }
 
-  .site-list__link {
-    display: block;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    font-size: 18px;
-    line-height: 18px;
-    text-align: center;
-    color: @white;
-    text-transform: uppercase;
-    background-color: @light-grey-blue;
-    border: 0;
-    border-top: 1px solid rgba(@white, 0.2);
-    border-bottom: 1px solid rgba(@black, 0.2);
+.site-list__link {
+  display: block;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 18px;
+  line-height: 18px;
+  text-align: center;
+  color: @white;
+  text-transform: uppercase;
+  background-color: @light-grey-blue;
+  border: 0;
+  border-top: 1px solid rgba(@white, 0.2);
+  border-bottom: 1px solid rgba(@black, 0.2);
 
-    &:hover,
-    &:focus {
-      background-color: darken(@light-grey-blue, 10%);
-    }
+  &:hover,
+  &:focus {
+    background-color: darken(@light-grey-blue, 10%);
   }
+
+  @media (min-width: @tablet-width) {
+    color: @black;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .site-list__item--current {
+    color: @greyish-brown;
+  }
+}
