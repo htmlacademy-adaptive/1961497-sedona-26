@@ -1,6 +1,8 @@
 .main-header {
+  display: flex;
   position: relative;
   margin: 0 auto;
+  background: #FFFFFF;
 }
 
 .main-header__open-nav-button {
@@ -27,8 +29,10 @@
 
 .main-header__logo {
   position: absolute;
-  left: auto;
-  right: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
   z-index: 2;
 }
 
@@ -45,6 +49,7 @@
 @media (min-width: @tablet-width) {
   .main-header {
     width: @tablet-width;
+    background-color: #FFFFFF;
   }
 
   .main-header__menu-bar {
@@ -52,10 +57,11 @@
   }
 
   .main-header__logo {
+    z-index: 1;
     width: 185px;
     height: 96px;
-    top: 0;
-    margin-left: -93.5px;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 
@@ -65,12 +71,14 @@
 @media (min-width: @desktop-width) {
   .main-header {
     width: @desktop-width;
-     max-width: 1200px;
+    max-width: 1200px;
   }
 
   .main-header__logo {
-    margin-left: -93.5px;
+    margin-left: auto;
+    margin-right: auto;
     width: 185px;
     height: 96px;
+
   }
 }

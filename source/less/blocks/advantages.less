@@ -15,6 +15,16 @@
   padding: 0;
   height: auto;
   max-width: 100%;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+  }
 }
 
 .advantages__item {
@@ -24,6 +34,15 @@
   flex-wrap: wrap;
   width: 100%;
   margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    margin: 0;
+  }
 }
 
 .advantages__item:nth-child(even) {
@@ -32,6 +51,24 @@
   flex-wrap: wrap;
   width: 100%;
   margin: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .container-text {
+    width: 33.33%;
+    box-sizing: border-box;
+    height: 385px;
+  }
+
+  &--h3 {
+    margin: auto;
+    width: 200px;
+  }
+
+  .container-text p {
+    width: 260px;
+    margin: 30px;
+  }
 }
 
 .advantages__name {
@@ -59,6 +96,15 @@
   margin: 0 auto;
   background-color: #83B3D3;
   color: #FFFFFF;
+
+  @media (min-width: @tablet-width) {
+    box-sizing: border-box;
+    padding: 20px;
+    width: 400px;
+    background-color: #83B3D3;
+    color: #FFFFFF;
+    padding-top: 94.7px;
+  }
 }
 
 .advantages__item-text {
@@ -81,22 +127,36 @@
 
 .advantages__backround {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   list-style-type: none;
-  margin: 0 auto;
-  padding: 0;
-  color: #000000;
-  background-color: #ffffff;
-  position: relative;
-  width: 320px;
-  max-width: 100%;
-  box-sizing: border-box;
+  margin: 0;
+  padding: 31px 18px 52px 18px;
+  color: rgba(0, 0, 0, 1);
+  background-color: rgba(255, 255, 255, 1);
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    padding: 0;
+    margin: 0 auto;
+    gap: 0;
+  }
 }
 
 .advantages__sublist-item {
   margin: 0;
   padding: 30px 30px 30px 65px;
   text-align: left;
+
+  @media (min-width: @tablet-width) {
+    box-sizing: border-box;
+    display: flex;
+    margin: 0;
+    text-align: center;
+    width: 400px;
+    padding-top: 84.5px;
+    max-width: 100%;
+  }
 }
 
 .advantages__image {
