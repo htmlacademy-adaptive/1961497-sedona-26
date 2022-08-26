@@ -111,13 +111,14 @@
 
 .block-photo__item {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
 
   @media (min-width: @tablet-width) {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     background-color: #f2f2f2;
     width: 50%;
+    flex-grow: 1;
   }
 
   @media (min-width: @desktop-width) {
