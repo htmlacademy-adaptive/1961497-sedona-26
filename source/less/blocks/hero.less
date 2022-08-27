@@ -13,6 +13,31 @@
   margin-bottom: 32px;
   padding-top: 50px;
   padding-bottom: 80px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/back-mobile@2x.jpg");
+  }
+
+  @media (min-width: @tablet-width) {
+    height: 518px;
+    background-image: url("../img/back-tablet.jpg");
+    background-size: 768px 518px;
+    background-repeat: no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/back-tablet@2x.jpg");
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../img/back-desktop.jpg");
+    background-size: 1200px 518px;
+    background-repeat: no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/back-desktop@2x.jpg");
+    }
+  }
 }
 
 .hero__logo {
@@ -21,6 +46,16 @@
   position: relative;
   height: auto;
   max-width: 100%;
+
+  @media (min-width: @tablet-width) {
+    max-width: 100%;
+    margin-top: 37px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 100%;
+    margin-top: 38px;
+  }
 }
 
 .hero::after {
@@ -34,4 +69,12 @@
   background-image: url("../img/mask-mobile.svg");
   background-repeat: no-repeat;
   background-position: center;
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../img/mask-tablet.svg");
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../img/mask-desktop.svg");
+  }
 }

@@ -9,14 +9,18 @@
 </head>
 
 <body class="form__body">
-  <header class="main-header">
+  <header class="main-header menu main-header--opened">
     <a class="main-header__logo" href="https://htmlacademy.ru/intensive/adaptive">
       <img src="img/logo.svg" width="185" height="96" alt="Логотип Седона">
     </a>
-    <nav class="main-nav">
-      <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+    <div class="main-header__menu-bar">
+      <button class="main-header__open-nav-button" type="button"><span class="visually-hidden">Открыть
+          меню</span></button>
+    </div>
+    <nav class="main-nav main-nav__opened">
+      <button class="main-nav__toggle" type="button"><span class="visually-hidden">Закрыть меню</span></button>
       <div class="main-nav__wrapper">
-        <ul class="main-nav__list site-list">
+        <ul class="main-nav__list site-list main-nav__list--nojs">
           <li class="site-list__item">
             <a class="site-list__link" href="index.html">Главная</a>
           </li>
@@ -55,7 +59,7 @@
             <label class="fieldset__label">Отчество:<input class="fieldset__field" type="text"
                 placeholder="Викторович"></label>
           </fieldset>
-          <fieldset class="form__fieldset fieldset">
+          <fieldset class="form__fieldset form__fieldset--contact-ifno fieldset">
             <legend class="fieldset__title">Контактная информация:</legend>
             <label class="fieldset__label fieldset__label--phone">Контактный телефон*:<input
                 class="fieldset__placeholder" type="text" placeholder="Введите телефон" required></label>
@@ -64,7 +68,7 @@
           </fieldset>
         </div>
         <div class="form__feedback">
-          <fieldset class="form__fieldset fieldset">
+          <fieldset class="form__fieldset form__fieldset--emotions fieldset">
             <legend class="fieldset__title">Ваше общее впечатление:</legend>
             <ul class="fieldset__list">
               <li class="fieldset__item">
@@ -93,7 +97,7 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset class="form__fieldset fieldset">
+          <fieldset class="form__fieldset form__fieldset--visited fieldset">
             <legend class="fieldset__title">Посещенные достопримечательности:</legend>
             <ul class="fieldset__list fieldset__list--landmark">
               <li class="fieldset__item">

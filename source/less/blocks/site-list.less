@@ -5,16 +5,106 @@
   background-color: #81b3d2;
   margin-bottom: 1px;
   box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2);
+
+  &:hover {
+    background-color: rgba(102, 158, 192, 1);
+
+    @media (min-width: @tablet-width) {
+      background-color: inherit;
+    }
+
+    .site-list__link {
+      @media (min-width: @tablet-width) {
+        color: rgba(129, 179, 210, 1);
+      }
+    }
+  }
+
+  &:active .site-list__link {
+    color: rgba(255, 255, 255, 0.2);
+    text-decoration: none;
+
+    @media (min-width: @tablet-width) {
+      color: rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  &--current .site-list__link {
+    @media (min-width: @tablet-width) {
+      color: rgba(118, 99, 87, 1);
+      text-decoration: none;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    width: auto;
+    height: 56px;
+    color: rgba(0, 0, 0, 1);
+    background-color: inherit;
+    box-shadow: none;
+    margin: 0;
+  }
+}
+
+.site-list__item:first-of-type {
+  box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2);
+
+  @media (min-width: @tablet-width) {
+    box-shadow: none;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .site-list__item {
+    margin: 0;
+    background-color: transparent;
+
+    &:nth-child(2) {
+      padding-right: 100px;
+    }
+
+    &:nth-child(3) {
+      padding-left: 100px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-list__item {
+    margin: 0;
+    background-color: transparent;
+
+    &:nth-child(2) {
+      padding-right: 175px;
+    }
+
+    &:nth-child(3) {
+      padding-left: 175px;
+    }
+  }
 }
 
 .site-list__link {
-  position: relative;
   display: block;
-  font-family: "PT Sans", sans-serif;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 18px;
+  line-height: 18px;
   text-align: center;
-  color: #ffffff;
-  text-decoration: none;
-  padding-top: 17px;
-  padding-bottom: 12px;
+  color: @white;
   text-transform: uppercase;
+  background-color: @light-grey-blue;
+  border: 0;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    background-color: darken(@light-grey-blue, 10%);
+  }
+
+  @media (min-width: @tablet-width) {
+    color: @black;
+    background-color: transparent;
+    text-decoration: none;
+  }
 }
