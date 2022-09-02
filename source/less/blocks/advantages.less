@@ -19,6 +19,7 @@
 
   @media (min-width: @tablet-width) {
     display: flex;
+    flex-direction: row;
     margin: 0;
     padding: 0;
     text-align: center;
@@ -53,7 +54,9 @@
 
 .advantages__item--box-grey {
   background-color: #EEEEEE;
-  flex-wrap: wrap;
+  display: flex;
+  margin: 0 auto;
+  padding: 26px 26px 24px 26px;
 
   @media (min-width: @desktop-width) {
     min-height: 152px;
@@ -62,6 +65,11 @@
     align-items: center;
     flex-wrap: nowrap;
   }
+}
+
+.advantages__item--box-grey:nth-child(even) {
+  border-bottom: 1px solid #D6D6D6;
+  border-top: 1px solid #D6D6D6;
 }
 
 .advantages__item:nth-child(even) {
@@ -128,15 +136,11 @@
 }
 
 .advantages__item-text {
-  padding: 43px 55px 65px 55px;
-   display: flex;
-   flex-direction: row;
-   justify-content: center;
-   flex-wrap: wrap;
-   width: 100%;
-   margin: 0;
-   background-color: #EEEEEE;
-   border-bottom: 1px solid #D6D6D6;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #EEEEEE;
+
 }
 
 .advantages__description {
@@ -145,6 +149,7 @@
   line-height: 21px;
   Font-style: Regular;
   margin: 0;
+  padding: 10px;
 
 
 }
@@ -163,6 +168,7 @@
   color: rgba(0, 0, 0, 1);
   background-color: rgba(255, 255, 255, 1);
   max-width: 100%;
+  padding: 0;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
@@ -177,14 +183,15 @@
   display: flex;
   flex-direction: column;
   list-style-type: none;
-  margin: 0;
-  padding: 31px 18px 52px 18px;
+  text-align: left;
+  margin: 0 auto;
+  padding: 65px 25px 15px 30px;
   color: rgba(0, 0, 0, 1);
   background-color: rgba(255, 255, 255, 1);
   gap: 30px;
 
   @media (min-width: @tablet-width) {
-    flex-direction: row;
+    flex-direction: column;
     padding: 0;
     gap: 0;
   }
@@ -192,6 +199,7 @@
   @media (min-width: @desktop-width) {
     flex-direction: column;
     align-items: center;
+    text-align: center;
   }
 }
 
@@ -207,8 +215,9 @@
 
 .advantages__title {
   font-size: 18px;
-  margin: 0;
-  margin-bottom: 16px;
+  margin: 0 auto;
+  padding: 0;
+  text-align: left;
 
   @media (min-width: @tablet-width) {
     margin-left: 0;
