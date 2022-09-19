@@ -10,8 +10,50 @@
   margin: 0;
   margin-bottom: 23px;
   margin-left: 6px;
+  fill: rgba(0, 0, 0, 1);
 }
 
 .copyright__link {
   display: flex;
+  color: rgba(0, 0, 0, 1);
+  text-decoration: none;
+  padding-right: 95px;
+  padding-left: 96px;
+
+  &:hover {
+    .copyright__text {
+      color: rgba(129, 179, 210, 1);
+    }
+
+    .copyright__logo {
+      fill: rgba(129, 179, 210, 1);
+    }
+  }
+
+  &:active {
+    .copyright__text {
+      color: rgba(179, 179, 179, 1);
+    }
+
+    .copyright__logo {
+      fill: rgba(179, 179, 179, 1);
+    }
+  }
+
+  &:focus {
+    outline: none;
+
+    .copyright__text {
+      color: rgba(129, 179, 210, 1);
+    }
+
+    .copyright__logo {
+      fill: rgba(129, 179, 210, 1);
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    margin: 100px;
+  }
 }

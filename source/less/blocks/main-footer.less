@@ -1,7 +1,7 @@
 .main-footer {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-direction: column;
   margin: 0;
   padding: 0;
@@ -19,17 +19,25 @@
   @media (min-width: @tablet-width) {
     flex-direction: row;
     justify-content: space-between;
+    margin-left: 55px;
+    padding: 0;
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 118px;
-    padding-right: 120px;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0;
   }
 }
 
 .main-footer__hashtag {
   margin: 34px;
   padding: 0;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 45px;
+  }
 }
 
 .main-footer__social {
@@ -40,9 +48,16 @@
 
   @media (min-width: @tablet-width) {
     display: flex;
+    justify-content: space-evenly;
+    margin-left: 97px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
     justify-content: space-between;
   }
 }
+
 
 /*************************************
  * tablet styles
@@ -71,5 +86,12 @@
 @media (min-width: @desktop-width) {
   .main-footer {
     width: @desktop-width;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+
+  .main-footer__hashtag {
+    margin: 0;
   }
 }
